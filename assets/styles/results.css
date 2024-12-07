@@ -1,0 +1,129 @@
+/* Results Page Styling */
+body.results-page {
+    background-color: #121826; /* Dark background */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 16px;
+  }
+  
+  /* Centering Results Vertically and Horizontally */
+  body.results-page {
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: center;
+    min-height: 100vh; /* Take full height of the viewport */
+    margin: 0;
+    overflow-y: auto; /* Allow scrolling */
+    padding: 16px; /* Provide some space around the body */
+  }
+  
+  /* Results Container Styling */
+  #resultsContainer {
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Center horizontally */
+    padding: 2rem; /* Padding for spacing */
+    width: 100%;
+    max-height: 80vh; /* Limit the height to allow scrolling */
+    overflow-y: auto; /* Enable vertical scrolling within the container */
+  }
+  
+  /* Results Title Styling */
+  .results-title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Results Styling */
+  .results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  /* User Card Styling for Results Page */
+  .user-card {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between avatar and details */
+    background-color: #1c2431;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 500px; /* Moderate width for the cards */
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .user-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Avatar Styling for Results Page */
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* Prevent stretching */
+  }
+  
+  /* Actor Details */
+  .details {
+    flex-grow: 1; /* Allow details section to grow */
+    min-width: 0; /* Prevent content from shrinking */
+  }
+  
+  .handle {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #62aaff; /* Bright blue */
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .handle:hover {
+    text-decoration: underline;
+  }
+  
+  .description {
+    color: #d1d5db; /* Light gray */
+    font-size: 0.9rem;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+  }
+  
+  /* Button Adjustments for Results Page */
+  .action-button {
+    background-color: #62aaff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  
+  .action-button:hover {
+    background-color: #5090d1; /* Darker blue */
+  }
+  
+  /* Display Name Styling */
+  .display-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff; /* Bright white */
+    margin-bottom: 4px;
+  }
+  

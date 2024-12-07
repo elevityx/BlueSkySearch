@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bluesky Checker</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white p-4">
+  <!-- Main Container -->
+  <div class="space-y-4">
+    <!-- Search Input -->
+    <div class="flex items-center space-x-2">
+      <input
+        type="text"
+        id="usernameInput"
+        placeholder="Enter Twitter/X username"
+        class="w-full p-2 rounded-md text-black"
+      />
+      <button
+        id="searchButton"
+        class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+      >
+        Check Bluesky
+      </button>
+    </div>
+
+    <!-- Results Container -->
+    <div id="resultsContainer" class="space-y-4">
+      <!-- User Cards will be appended here dynamically -->
+    </div>
+
+    <!-- Buttons at the Bottom -->
+    <div class="flex justify-between space-x-2">
+      <button id="backButton" class="bg-gray-400 text-white px-3 py-1 rounded hover:bg-gray-500">Back</button>
+
+      <!-- Updated View All Results Button -->
+      <button id="viewAllButton" class="bg-green-500 text-white px-6 py-3 rounded-md shadow-lg hover:bg-green-600 flex items-center justify-center space-x-2">
+        <svg id="viewAllSpinner" class="animate-spin h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+        </svg>
+        <span id="viewAllButtonText">View All Results</span>
+      </button>
+
+      <button id="clearResultsButton" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Clear All Results</button>
+    </div>
+  </div>
+
+  <!-- Include the Main JavaScript File as a Module -->
+  <script type="module" src="../src/popup/popup.js"></script>
+</body>
+</html>

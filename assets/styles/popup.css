@@ -1,0 +1,148 @@
+/* General Popup Sizing */
+html, body {
+  width: 400px;  /* Fixed width for proper layout */
+  height: 500px;  /* Fixed height to prevent resizing */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling of the entire popup */
+}
+
+/* Main Content Visibility */
+#mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Fill popup window */
+  gap: 10px; /* Spacing between elements */
+}
+
+#resultsContent {
+  display: none; /* Hidden initially, controlled by JavaScript */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 10px;
+}
+
+/* Results Container Styling in Popup */
+#modalResults {
+  background-color: #1c2431;
+  border-radius: 10px;
+  width: 100%; /* Use full popup width */
+  padding: 15px;
+  max-height: 60vh; /* Limit height to allow scrolling */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Prominent Scrollbars */
+#modalResults::-webkit-scrollbar {
+  width: 10px;
+}
+
+#modalResults::-webkit-scrollbar-thumb {
+  background-color: #4a5568; /* Gray */
+  border-radius: 5px;
+}
+
+#modalResults::-webkit-scrollbar-thumb:hover {
+  background-color: #2d3748; /* Darker gray */
+}
+
+/* Scroll Hint Styling for Popup */
+.scroll-hint {
+  position: sticky;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.scroll-hint svg {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* General Button Styling */
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Close and View All Results Buttons for Popup */
+button#closeResults {
+  background-color: #e53e3e; /* Red button for back */
+  color: white;
+}
+
+button#viewAllResults {
+  background-color: #3182ce; /* Blue button for view all */
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9; /* Subtle hover effect */
+}
+
+.hidden {
+  display: none !important; /* Ensure elements are hidden when this class is added */
+}
+
+/* User Card Styling */
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #2d3748; /* Tailwind's gray-800 */
+  border-radius: 8px;
+}
+
+.user-card .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-card .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card .handle {
+  color: #63b3ed; /* Tailwind's blue-400 */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.user-card .handle:hover {
+  text-decoration: underline;
+}
+
+.user-card .displayName {
+  color: #ffffff; /* White text */
+  font-size: 16px;
+}
+
+.user-card .description {
+  color: #a0aec0; /* Tailwind's gray-400 */
+  font-size: 14px;
+}

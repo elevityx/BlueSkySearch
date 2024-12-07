@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "BlueSkySearch",
+  "version": "1.0",
+  "description": "Search for Bluesky profiles and keywords to find relevant users.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "host_permissions": [
+    "https://public.api.bsky.app/*"
+  ],
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": "assets/images/icon.png"
+  },
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "assets/images/icon.png",
+    "48": "assets/images/icon.png",
+    "128": "assets/images/icon.png"
+  }
+}

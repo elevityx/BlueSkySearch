@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saved Results - Bluesky Checker</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white p-4">
+  <!-- Main Container -->
+  <div class="max-w-4xl mx-auto space-y-4">
+
+    <!-- Search Input, Checkboxes, and Control Buttons -->
+    <div class="flex items-center space-x-2 mb-4">
+      <input type="text" id="searchInput" placeholder="Search Bluesky users" class="w-full p-2 rounded-md text-black" />
+      <input type="checkbox" id="localSearchCheckbox" class="ml-2" />
+      <label for="localSearchCheckbox" class="text-sm text-gray-300">Search saved results only</label>
+      <button id="searchButton" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 flex items-center space-x-2">
+        <svg id="searchSpinner" class="animate-spin h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+        </svg>
+        <span id="searchButtonText">Search</span>
+      </button>
+      <button id="viewAllButton" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">View All Results</button>
+      <button id="clearResultsButton" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Clear All Results</button>
+    </div>
+
+    <!-- Page Header -->
+    <div class="text-center">
+      <h1 class="text-2xl font-bold">Saved Bluesky Search Results</h1>
+    </div>
+
+    <!-- Results Container -->
+    <div id="resultsContainer" class="space-y-4">
+      <!-- User Cards will be appended here dynamically -->
+    </div>
+  </div>
+
+  <!-- Include the Main JavaScript File as a Module -->
+  <script type="module" src="../src/results/results.js"></script>
+</body>
+</html>
